@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import org.hibernate.bytecode.enhance.spi.EnhancementInfo;
+
 
 @Entity
 @AllArgsConstructor

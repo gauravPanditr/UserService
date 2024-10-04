@@ -8,5 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepositary extends CrudRepository <UserInfoDto,String> {
 
 
+            UserInfoDto findByUserId(String userId);
+
 
 }
