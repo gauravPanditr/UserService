@@ -1,14 +1,18 @@
 package org.example.repositary;
 
+import org.example.enities.UserInfo;
 import org.example.enities.UserInfoDto;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
-public interface UserRepositary extends CrudRepository <UserInfoDto,String> {
+@EnableJpaRepositories
+public interface UserRepositary extends CrudRepository <UserInfo,String> {
 
-
-            UserInfoDto findByUserId(String userId);
+    Optional<UserInfo> findByUserId(String userId);
 
 
 }
