@@ -22,36 +22,36 @@ public class UserInfoDto
 {
 
 
-    @NonNull
+
     private String userId;
 
 
     @NonNull
-    private String firstName;
+    private String firstName; // Allow null values
 
 
     @NonNull
-    private String lastName;
+    private String lastName;  // Allow null values
 
 
     @NonNull
-    private Long phoneNumber;
+    private Long phoneNumber; // Allow null values
 
 
     @NonNull
-    private String email;
+    private String email;     // Allow null values
 
 
     private String profilePic;
 
     public UserInfo transformToUserInfo() {
         return UserInfo.builder()
-                .firstName(firstName)
+                .firstName(firstName ) // Default value
                 .lastName(lastName)
                 .userId(userId)
                 .email(email)
                 .profilePic(profilePic)
-                .phoneNumber(phoneNumber).build();
-    }
-
+                .phoneNumber(phoneNumber) // Default value
+                .build();
+}
 }
